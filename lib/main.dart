@@ -13,13 +13,13 @@ class _MyAppState extends State<MyApp> {
   var _questionIndex = 0;
   var _totalScore = 0;
 
-  void _answerQuestion(int score) {
+  void _answerQuestion(int score, String selectedAnswer) {
     setState(() {
       _questionIndex++;
     });
 
     _totalScore += score;
-
+    print('Selected Answer = $selectedAnswer');
     print('question index = $_questionIndex');
     print('_totalScore = $_totalScore');
   }
